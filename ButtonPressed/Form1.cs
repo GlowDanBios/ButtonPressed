@@ -10,11 +10,22 @@ using System.Windows.Forms;
 
 namespace ButtonPressed
 {
-  public partial class Form1 : Form
-  {
-    public Form1()
+    public partial class Form1 : Form
     {
-      InitializeComponent();
+        private int times = 0;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (times == 0)
+            {
+                this.button1.Text = "Вы нажа-а-а-а-ли меня!!!!";
+                times++;
+            }
+            else this.Close();
+        }
     }
-  }
 }
